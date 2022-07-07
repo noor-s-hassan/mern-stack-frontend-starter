@@ -34,17 +34,17 @@ class Post extends Component {
                 .then((response) => {
                     this.setState({ post: response.data });
                     // Set the reading time for the post
-                    if (this.state.post) {
-                        const wordsPerMinute = 200; //average rate;
-                        const noOfWords = this.state.post.body.split(" ")
-                            .length;
-                        if (noOfWords) {
-                            const readingTime = Math.floor(
-                                noOfWords / wordsPerMinute
-                            );
-                            this.setState({ readingTime: readingTime });
-                        }
-                    }
+                    //if (this.state.post) {
+                        //const wordsPerMinute = 200; //average rate;
+                        //const noOfWords = this.state.post.body.split(" ")
+                            //.length;
+                        //if (noOfWords) {
+                            //const readingTime = Math.floor(
+                                //noOfWords / wordsPerMinute
+                            //);
+                            //this.setState({ readingTime: readingTime });
+                        //}
+                    //}
 
                     // Remove display of loader
                     document.querySelector(".spinner-border").style.display =
